@@ -9,7 +9,7 @@ class AppWrite {
   static void init() {
     _client
         .setEndpoint('https://cloud.appwrite.io/v1')
-        .setProject('668c00740022c9168bb5')
+        .setProject('Your project id')
         .setSelfSigned(status: true); // For self-signed certificates, only use for development
     getApiKey();
   }
@@ -17,9 +17,9 @@ class AppWrite {
   static Future<void> getApiKey() async {
     try {
       final d = await _database.getDocument(
-          databaseId: 'ai_assistant_database',
-          collectionId: 'ApiKey',
-          documentId: 'geminiApiKey'
+          databaseId: 'your database id',
+          collectionId: 'your collection id',
+          documentId: 'your document id'
       );
 
       // Assuming the API key is stored in a field named 'apiKey'
